@@ -10,14 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll to on click interactions
     var clickScroll = new Scroll_To();
     clickScroll.init();
+
+    setFullYearText();
 });
 
 
 // Trigger functions after page is completely loaded
 window.onload = function() {
     // Do something, remove preloader perhaps
-    console.log("Page fully loaded.");
-    console.log("Initialize.js");
+    // console.log("Page fully loaded.");
+    // console.log("Initialize.js");
 
     // Load animation
     document.getElementById('header-nav').classList.add('animate');
@@ -39,4 +41,89 @@ window.onload = function() {
             }
         })
     }
+
+    setupAutoSliderCarousel();
+}
+
+function setFullYearText() {
+    let elems = document.getElementsByClassName('dt_year');
+
+    for (var i = 0; i < elems.length; i++) {
+        elems[i].textContent = new Date().getFullYear();
+    }
+}
+
+function setupAutoSliderCarousel() {
+    let slider = document.querySelector('.img-carousel ._inner-wrapper');
+    let reviewItems = document.querySelectorAll('.img-carousel ._img-container');
+    let progressContainer = document.querySelector('.img-carousel ._pagination');
+    let progressIndicators = document.querySelectorAll('._pagination ._indicator');
+    let timerId = null;
+
+    // let currentSlide = 0;
+
+    function setSlide(num) {
+        let current = Number(progressContainer.getAttribute('data-selected'));
+        let selected = Number(num);
+        
+        let distanceToSlide = slider.clientWidth * selected * -1;
+
+        // console.log(currentSlide, selected)
+
+        // if (current > selected) {
+        //     // distanceToSlide *= -1;
+
+        //     console.log('current more than selected')
+        // }
+
+
+
+        // console.log(distanceToSlide)
+
+
+        // slider.style.transform = `translateX(${distanceToSlide}px)`;
+
+        slider.style.left = `${distanceToSlide}px`;
+
+
+        // console.log('set', Number(num));
+
+        // Set the current number the slide is now on
+        progressContainer.setAttribute('data-selected', selected);
+        // currentSlide = selected;
+
+        // Show indicators as bubbles
+        setProgress(num);
+    }
+
+    function setProgress(num) {
+        for (let i = 0; i < progressIndicators.length; i++) {
+            if (Number(num) === Number(i)) {
+                progressIndicators[i].classList.add('active');
+            }
+                else {
+                    progressIndicators[i].classList.remove('active');        
+                }
+        }
+    }
+
+    function startAutoSlide() {
+        timerId = setInterval(() => {
+            let current = Number(progressContainer.getAttribute('data-selected'));
+            let slideNext = (current + 1) % reviewItems.length;
+            setSlide(slideNext);
+        }, 6000); 
+    }
+
+    for (let i = 0; i < progressIndicators.length; i++) {
+        progressIndicators[i].addEventListener('click', function(e) {
+            clearInterval(timerId);
+            setSlide(i);
+            startAutoSlide();
+        }.bind(this));
+    }
+
+    // Slide the cards every x interval
+    startAutoSlide()
+    
 }

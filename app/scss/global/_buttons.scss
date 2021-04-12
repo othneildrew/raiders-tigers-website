@@ -13,6 +13,11 @@
 		background-color: $bg-color;
 		color: $main-theme-color-hover;
 	}
+
+	&--warning {
+		background-color: #F8D354;
+		color: #000000;
+	}
 }
 
 

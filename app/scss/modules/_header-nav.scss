@@ -9,8 +9,12 @@
 	// padding-top: 50px;
 	padding-left: 20px;
 	padding-right: 20px;
-	background-color: $bg-color;
+	background: $bg-color;
+	background: linear-gradient(to bottom, #ffffff 94%, rgba(255, 255, 255, 0.4));
 	@include transitions-ease(.4s);
+
+	height: auto;
+	// border: 1px solid purple;
 
 	@include small-desktop {
 		height: $header-nav-height;
@@ -35,15 +39,16 @@
 			display: block;
 				// Placehold style
 				width: auto;
-				height: 100px;
+				height: 70px;
 				// height: 30px;
 
 				// background-color: $main-theme-color;
 				// border-radius: 30px;
 
-				border: 1px solid red;
+				// border: 1px solid red;
 
 				@include small-desktop {
+					width: 90px;
 					// width: 220px;
 					// height: 60px;
 					// border-radius: 60px;
@@ -54,7 +59,7 @@
 			pointer-events: none;
 			height: 100%;
 			vertical-align: middle;
-			border: 1px solid blue;
+			// border: 1px solid blue;
 			// color: $bg-color;
 
 			// @include tablet {
@@ -80,7 +85,7 @@
 				color: $main-theme-color;
 
 				&:not(:last-child){
-					margin-right: 56px;
+					margin-right: 40px;
 				}
 			}
 

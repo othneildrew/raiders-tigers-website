@@ -6,15 +6,34 @@ section#hero-section.menu-padded-section
 		.og-row
 			#hero-info.intro-wrap.offset-2.og-col-20.og-col-sm-10.og-col-md-8.og-col-xs-14.og-col-xl-7
 				.title-wrap
-					h1.h2(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2") Voluptatem corporis et odit qui iure
+					h1.h2(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2") Houston-based Flight Training School
 
 				.bottom-wrap
-					p.p1._description(data-cascade="slide-up" data-cascade-delay-mobile="3" data-cascade-delay="3") A non-profit dedicated to helping aspiring pilots reach their aviation goals
+					p.p1._description(data-cascade="slide-up" data-cascade-delay-mobile="3" data-cascade-delay="3") Training the next generation of proficient pilots
 
 					div(data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						a(href="contact-section").h4._cta.solid-btn.scroll-to-js Start Training
-						a(href="#").h4._cta.solid-btn Donate
+						a(href="#").h4._cta.solid-btn.solid-btn--warning Donate
 
-			//- #hero-image.image-wrap.og-col-24.offset-xs-2.og-col-xs-20.offset-sm-1.og-col-sm-11.offset-md-1.og-col-md-13.og-col-xl-14
-				div(data-cascade="slide-up" data-cascade-delay-mobile="5" data-cascade-delay="3")
+			#hero-image.image-wrap.og-col-24.offset-xs-2.og-col-xs-20.offset-sm-1.og-col-sm-11.offset-md-1.og-col-md-13.og-col-xl-14
+				//- div(data-cascade="slide-up" data-cascade-delay-mobile="5" data-cascade-delay="3")
 					img(src="img/tahchiona-captain-license-cropped.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+
+				.img-carousel(data-selected="0")
+					._inner-wrapper
+						._img-container
+							img(src="img/tahchiona-captain-license-cropped.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+						._img-container
+							img(src="img/flying-2-cropped.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+						._img-container
+							img(src="img/flying-3-cropped.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+						._img-container
+							img(src="img/ground-school-1-cropped.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+						._img-container
+							img(src="img/plane-1.jpg", alt="Pilot Tahchiona receiving pilot certificate")
+					._pagination(data-selected="0")
+						._indicator.active
+						._indicator
+						._indicator
+						._indicator
+						._indicator

@@ -6,7 +6,7 @@
 	height: 100%;
 	min-height: 500px;
 	padding-top: $mob-header-nav-height;
-	background-color: $dark-bg-color;
+	background-color: $bg-color;
 	overflow: hidden;
 	@include transitions-ease(.4s);
 	opacity: 0;
@@ -92,7 +92,7 @@
 
 		& ~ #header-nav{
 			@include transitions-ease(.6s);
-			background-color: $dark-bg-color;
+			background-color: $bg-color;
 
 			@include tablet {
 				background-color: $bg-color;
@@ -111,6 +111,7 @@
 				&:first-child{@include trans-ease-delay(.6s, .2s);}
 				&:nth-child(2){@include trans-ease-delay(.6s, .3s);}
 				&:nth-child(3){@include trans-ease-delay(.6s, .4s);}
+				&:nth-child(4){@include trans-ease-delay(.6s, .5s);}
 			}
 		}
 
