@@ -1,0 +1,81 @@
+mixin service-card-with-img(textAlignClass, title, description, products, imgURL, extraService)
+	.service-card-with-img.motion-cascade(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+		.inner-wrap
+			.photo-holder
+				img(src="#{imgURL}", alt="#{title} image")
+
+
+			.info-container(class="#{textAlignClass}")
+				h3._title.h3(data-cascade="slide-up" data-cascade-delay-mobile="3" data-cascade-delay="3") #{title}
+
+				p._description.p2(data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")  #{description}
+
+				for n, i in products
+					h6._price.h2(data-cascade="slide-up" data-cascade-delay-mobile="5" data-cascade-delay="5") #{n.price}
+
+					if (n.label)
+						h6._price-label.p2(data-cascade="slide-up" data-cascade-delay-mobile="5" data-cascade-delay="5") #{n.label}
+
+				a.h4._cta.solid-btn.scroll-to-js(href="contact-section" data-cascade="slide-up" data-cascade-delay-mobile="6" data-cascade-delay="6") Book now!
+
+				if (extraService)
+					p._extra.p2(data-cascade="slide-up" data-cascade-delay-mobile="7" data-cascade-delay="7")
+						| #{extraService.copy}
+						span._highlight.semibold.color #{extraService.price}
+			
+			
+
+
+
+section#services-section.--cards.menu-padded-section
+	.og-container
+		.og-row.motion-cascade
+			.section-title.offset-2.og-col-20.offset-xs-4.og-col-xs-16.offset-lg-5.og-col-lg-14
+				h2.h2._title(data-cascade="slide-up" data-cascade-delay-mobile="1" data-cascade-delay="2")
+					|Services / Products 
+					br
+					|(cards format)
+
+
+		.og-row
+			.service-card-wrap.offset-1.og-col-22.offset-xs-1.og-col-xs-10.offset-lg-1.og-col-lg-11.og-col-xl-10.motion-cascade
+				+service-card-with-img(
+					"--centered",
+					"Service / Product 1",
+
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius nulla nam id repellat cupiditate nobis quos, ipsa autem optio ullam, cum adipisci dignissimos sint fugiat vitae a nihil aspernatur.",
+
+					[{"price": "$99.99 USD"}],
+
+					"http://www.fillmurray.com/800/500",
+
+					{
+						"copy": "Add something extra to your service for ",
+						"price": "$20.00"
+					}
+				)
+
+			.service-card-wrap.offset-1.og-col-22.offset-xs-2.og-col-xs-10.offset-lg-0.og-col-lg-11.offset-xl-2.og-col-xl-10.motion-cascade
+				+service-card-with-img(
+					"--centered",
+					"Service / Product 2",
+
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius nulla nam id.",
+
+					[
+						{
+							"price": "$99.99 USD",
+							"label": "Type 1"
+						},
+						{
+							"price": "$199.99 USD",
+							"label": "Type 2"
+						}
+					],
+
+					"http://www.fillmurray.com/800/500"
+				)
+
+
+
+

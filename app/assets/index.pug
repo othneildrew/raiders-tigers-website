@@ -1,0 +1,26 @@
+extends _templates/layout.pug
+
+
+//- block title
+	title Brunch_Basic_Boilerplate
+
+
+//- block google_metatags
+	meta(name='description', content='Page_description')
+	meta(name='subject', content='Page_subject')
+
+
+//- block og_metatags
+	meta(property="og:url" 			content="PLACE_YOUR_URL")
+	meta(property="og:title" 		content="PLACE_YOUR_TITLE")
+	meta(property="og:description" 	content="PLACE_YOUR_DESCRIPTION")
+	meta(property="og:image" 		content="PLACE_YOUR_IMAGE_URL")
+
+
+block content
+	include _modules/hero-section.pug
+	//- include _modules/quote-section.pug
+	include _modules/services-section--no-img.pug
+	include _modules/about-section.pug
+	//- include _modules/services-section--cards.pug
+	include _modules/contact-section.pug

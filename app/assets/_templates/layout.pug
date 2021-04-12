@@ -1,0 +1,106 @@
+doctype html
+html(class='no-js')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1')
+		meta(name='viewport', content='shrink-to-fit=no, initial-scale=1.0, minimum-scale=1, width=device-width, height=device-height')
+
+		block title
+			title jljsd
+
+		//- metatags
+		block google_metatags
+			meta(name='description', content='Page_description')
+			meta(name='subject', content='Page_subject')
+
+		//- Share graphs for social media
+		block og_metatags
+			meta(property="og:url" 			content="PLACE_YOUR_URL")
+			meta(property="og:title" 		content="PLACE_YOUR_TITLE")
+			meta(property="og:description" 	content="PLACE_YOUR_DESCRIPTION")
+			meta(property="og:image" 		content="PLACE_YOUR_IMAGE_URL")
+
+		//- Share graphs that doesn't change
+		meta(property="og:type" 		content="website")
+		meta(name="twitter:card", content="summary")
+
+		//- stylesheets
+		link(rel='stylesheet', href='css/app.css')
+
+	body
+		//- testing grid
+		.og-container.fortest.view-padding
+		.og-container.fortest
+			.og-row
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+				.og-col-1
+					.inner
+
+
+
+		//- Mixins
+		include ../_modules/_svg-mixins.pug
+
+
+
+		//- mobile menu window
+		include ../_modules/mobile-menu.pug
+
+
+		//- header
+		include ../_modules/header-nav.pug
+
+		//- content
+		#main-wrapper
+			block content
+
+		//- footer
+		include ../_modules/footer.pug
+
+		//- scripts
+		script(src='js/app.js')

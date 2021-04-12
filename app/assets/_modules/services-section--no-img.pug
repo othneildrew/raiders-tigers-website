@@ -1,0 +1,39 @@
+mixin service-bullet-block(title, description)
+	.service-bullet-block
+		._icon
+			+svg-checkmark("#000000")
+
+		h3.h4._title #{title}
+
+		p.p2._description #{description}
+
+
+
+section#services-section.--no-img.menu-padded-section
+	.og-container
+		.og-row.motion-cascade
+			.section-title.offset-2.og-col-20.offset-xs-4.og-col-xs-16.offset-lg-5.og-col-lg-14
+				h2.h2._title(data-cascade="slide-up" data-cascade-delay-mobile="1" data-cascade-delay="2")
+					| Flight Training Offered
+
+
+		.og-row
+			.offset-3.og-col-19.offset-xs-3.og-col-xs-9.offset-md-5.og-col-md-4.motion-cascade
+				div(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+					+service-bullet-block("Private Pilot", "")
+
+
+			.offset-3.og-col-19.og-col-xs-9.offset-md-1.og-col-md-4.motion-cascade
+				div(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+					+service-bullet-block("Instrument Rating", "")
+
+
+			.offset-3.og-col-19.offset-xs-3.og-col-xs-9.offset-md-1.og-col-md-4.motion-cascade
+				div(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+					+service-bullet-block("Commercial Pilot", "")
+
+
+
+			.offset-3.og-col-19.og-col-xs-9.offset-md-10.og-col-md-4.motion-cascade
+				div(data-cascade="slide-up" data-cascade-delay-mobile="2" data-cascade-delay="2")
+					+service-bullet-block("Flight Instructor", "")

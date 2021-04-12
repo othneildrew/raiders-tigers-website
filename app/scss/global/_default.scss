@@ -1,0 +1,38 @@
+// Default style
+*{
+	@include border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, section, div, nav, ul, li, button{
+	margin: 0;
+	padding: 0;
+}
+
+ul,li {
+	list-style-type: none;
+}
+
+._highlight{
+	&.underline{
+		text-decoration: underline;
+	}
+	
+	&.medium{
+		font-weight: 500;
+	}
+	
+	&.semibold{
+		font-weight: 600;
+	}
+	
+	&.color{
+		color: $main-theme-color;
+	}
+}
+
+
+.scroll-to-js{
+	*{
+		pointer-events: none;
+	}
+}

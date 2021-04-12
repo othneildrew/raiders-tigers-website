@@ -1,0 +1,23 @@
+{
+	"name": "piper-plumbing-web",
+	"private": true,
+	"author": "Snaju LLC",
+	"version": "0.0.1",
+	"repository": "git@git.hou.snaju.com:grant-template/piper-plumbing.git",
+	"engines": {
+		"node": "^14.16.0"
+	},
+	"scripts": {
+		"start": "brunch watch --server",
+		"build": "brunch build --production"
+	},
+	"devDependencies": {
+		"auto-reload-brunch": "^2.7.1",
+		"brunch": "^4.0.0",
+		"pug": "^3.0.2",
+		"pugjs-brunch": "^2.11.3",
+		"sass-brunch": "^3.0.0",
+		"uglify-js-brunch": "2.10"
+	},
+	"dependencies": {}
+}

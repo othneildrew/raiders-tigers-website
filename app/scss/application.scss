@@ -1,0 +1,24 @@
+/*Normalize*/
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+
+// Import libraries
+
+
+// Import your files
+@import 'global/mixins';
+@import 'global/grid';
+@import 'global/theme';
+@import 'global/default';
+@import 'global/buttons';
+@import 'global/cascade-animation';
+
+@import 'modules/header-nav';
+@import 'modules/mobile-menu';
+@import 'modules/hero-section';
+@import 'modules/quote-section';
+@import 'modules/about-section';
+@import 'modules/services-section';
+@import 'modules/contact-section';
+@import 'modules/footer';
+
+@import 'views/_index'

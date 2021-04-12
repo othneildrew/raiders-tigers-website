@@ -1,0 +1,146 @@
+#header-nav{
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	// margin-top: 50px;
+
+	width: 100%;
+	height: $mob-header-nav-height;
+	// padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: $bg-color;
+	@include transitions-ease(.4s);
+
+	@include small-desktop {
+		height: $header-nav-height;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.inner-wrap{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include flexIt;
+		@include flexJustify;
+		@include flexAlign-center;
+	}
+
+	.logo-wrap{
+		position: relative;
+		display: inline-block;
+
+		a{
+			display: block;
+				// Placehold style
+				width: auto;
+				height: 100px;
+				// height: 30px;
+
+				// background-color: $main-theme-color;
+				// border-radius: 30px;
+
+				border: 1px solid red;
+
+				@include small-desktop {
+					// width: 220px;
+					// height: 60px;
+					// border-radius: 60px;
+				}
+		}
+
+		img{
+			pointer-events: none;
+			height: 100%;
+			vertical-align: middle;
+			border: 1px solid blue;
+			// color: $bg-color;
+
+			// @include tablet {
+			// 	height: 25px;
+			// }
+
+			// @include laptop {
+			// 	height: 30px;
+			// }
+		}
+	}
+
+	.pages-wrap{
+		display: none;
+
+		@include tablet {
+			position: relative;
+			display: inline-block;
+			float: right;
+
+			li{
+				display: inline-block;
+				color: $main-theme-color;
+
+				&:not(:last-child){
+					margin-right: 56px;
+				}
+			}
+
+			a{
+				font-weight: 500;
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+
+
+	.mobile-menu-trigger{
+		position: absolute;
+		height: 100%;
+		right: 0;
+
+		@include tablet {
+			display: none;
+		}
+
+		.burger-btn{
+			position: relative;
+			padding: 16px 0;
+			background: none;
+			border: 0;
+			border-radius: 0;
+
+			._line{
+				display: block;
+				width: 32px;
+				height: 2px;
+				background-color: $body-text-color;
+				@include transitions-ease(.4s);
+
+				&:first-child{@include transform-origin(top, right);}
+				&:last-child{@include transform-origin(bottom, right);}
+
+				&:not(:last-child){
+					margin-bottom: 6px;
+				}
+			}
+		}
+
+		&.opened {
+			.burger-btn{
+				._line{
+					@include transitions-ease(.6s);
+
+					&:first-child{
+						@include rotate(-30deg);
+					}
+					&:nth-child(2){
+						@include scale(0,1);
+					}
+					&:last-child{
+						@include rotate(30deg);
+					}
+				}
+			}
+		}
+	}
+}

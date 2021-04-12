@@ -1,0 +1,33 @@
+#about-section{
+	.image-wrap{
+		overflow: hidden;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.info-wrap{
+		@include flexIt;
+		@include flexDirection-Vert;
+		@include flexJustify-center;
+
+		@include mobile {
+			padding-bottom: 32px;
+		}
+
+		._label{
+			margin-bottom: 16px;
+			color: $main-theme-color;
+		}
+
+		._body{
+			margin-bottom: 1.2em;
+		}
+
+		._cta{
+			color: $main-theme-color;
+			font-weight: 500;
+		}
+	}
+}

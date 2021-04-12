@@ -1,0 +1,138 @@
+#mobile-menu{
+	z-index: 99;
+	pointer-events: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	padding-top: $mob-header-nav-height;
+	background-color: $dark-bg-color;
+	overflow: hidden;
+	@include transitions-ease(.4s);
+	opacity: 0;
+
+	@include tablet {
+		display: none;
+	}
+
+	.menu-links-wrap{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include flexIt;
+		@include flexDirection-Vert;
+		@include flexJustify;
+		overflow: hidden;
+	}
+
+	.links-container{
+		position: relative;
+		padding-top: 24px;
+		text-align: right;
+
+		li{
+			@include transitions-ease(.4s);
+			opacity: 0;
+			@include translate3d(10px, 0, 0);
+			
+			&:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	.social-wrap {
+		margin-top: 40px;
+		text-align: left;
+
+		._title{
+			margin-bottom: 16px;
+			opacity: 0;
+			@include translate3d(10px, 0, 0);
+			@include transitions-ease(.4s);
+		}
+	}
+
+	.footer-shortcut{
+		@include transitions-ease(.2s);
+		opacity: 0;
+
+		.copyright-wrap{
+			padding-bottom: 16px;
+		}
+
+		._copyright{
+			color: $main-theme-color;
+		}
+
+		.credits-wrap{
+			padding-bottom: 16px;
+
+			._topline{
+				position: relative;
+				width: 100%;
+				border-bottom: 1px solid $main-theme-color;
+				margin-bottom: 16px;
+			}
+
+			._credits{
+				&:not(:last-child){
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+
+
+
+	&.opened{
+		@include transitions-ease(.6s);
+		opacity: 1;
+		pointer-events: auto;
+
+		& ~ #header-nav{
+			@include transitions-ease(.6s);
+			background-color: $dark-bg-color;
+
+			@include tablet {
+				background-color: $bg-color;
+			}
+		}
+
+		.links-container{
+			li{
+				opacity: 1;
+				@include translate3d(0,0,0);
+			}
+		}
+
+		.pages-wrap{
+			li{
+				&:first-child{@include trans-ease-delay(.6s, .2s);}
+				&:nth-child(2){@include trans-ease-delay(.6s, .3s);}
+				&:nth-child(3){@include trans-ease-delay(.6s, .4s);}
+			}
+		}
+
+
+		.social-wrap{
+			._title{
+				@include trans-ease-delay(.6s, .5s);
+				opacity: 1;
+				@include translate3d(0,0,0);
+			}
+
+			li{
+				&:first-child{@include trans-ease-delay(.6s, .6s);}
+				&:nth-child(2){@include trans-ease-delay(.6s, .7s);}
+				&:nth-child(3){@include trans-ease-delay(.6s, .8s);}
+			}
+		}
+
+		.footer-shortcut{
+			@include trans-ease-delay(1s, 1.2s);
+			opacity: .5;
+		}
+
+	}
+}
