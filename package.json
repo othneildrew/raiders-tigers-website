@@ -1,15 +1,15 @@
 {
-	"name": "piper-plumbing-web",
+	"name": "raiders-tigers-flying-club",
 	"private": true,
 	"author": "Snaju LLC",
 	"version": "0.0.1",
-	"repository": "git@git.hou.snaju.com:grant-template/piper-plumbing.git",
 	"engines": {
 		"node": "^14.16.0"
 	},
 	"scripts": {
 		"start": "brunch watch --server",
-		"build": "brunch build --production"
+		"build": "brunch build",
+		"prod": "brunch build --production"
 	},
 	"devDependencies": {
 		"auto-reload-brunch": "^2.7.1",

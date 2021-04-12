@@ -54,19 +54,19 @@ function setFullYearText() {
 }
 
 function setupAutoSliderCarousel() {
-    let slider = document.querySelector('.img-carousel ._inner-wrapper');
-    let reviewItems = document.querySelectorAll('.img-carousel ._img-container');
-    let progressContainer = document.querySelector('.img-carousel ._pagination');
-    let progressIndicators = document.querySelectorAll('._pagination ._indicator');
-    let timerId = null;
+    var slider = document.querySelector('.img-carousel ._inner-wrapper');
+    var reviewItems = document.querySelectorAll('.img-carousel ._img-container');
+    var progressContainer = document.querySelector('.img-carousel ._pagination');
+    var progressIndicators = document.querySelectorAll('._pagination ._indicator');
+    var timerId = null;
 
     // let currentSlide = 0;
 
     function setSlide(num) {
-        let current = Number(progressContainer.getAttribute('data-selected'));
-        let selected = Number(num);
+        var current = Number(progressContainer.getAttribute('data-selected'));
+        var selected = Number(num);
         
-        let distanceToSlide = slider.clientWidth * selected * -1;
+        var distanceToSlide = slider.clientWidth * selected * -1;
 
         // console.log(currentSlide, selected)
 
