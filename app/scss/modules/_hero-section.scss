@@ -218,6 +218,20 @@
 				object-fit: cover;
 				object-position: top;
 			}
+
+			._caption {
+				z-index: 50;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+				padding: 10px 15px;
+				background-color: rgba(0, 0, 0, 0.55);
+				color: #ffffff;
+				font-size: 0.8em;
+			}
 		}
 
 		._pagination {
