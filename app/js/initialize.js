@@ -46,7 +46,7 @@ window.onload = function() {
 }
 
 function setFullYearText() {
-    let elems = document.getElementsByClassName('dt_year');
+    let elems = document.getElementsByClassName('datetime__year');
 
     for (var i = 0; i < elems.length; i++) {
         elems[i].textContent = new Date().getFullYear();
